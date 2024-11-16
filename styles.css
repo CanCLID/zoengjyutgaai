@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "KuMincho";
+  src: url("KuMincho-R.woff2") format("woff2"),
+    url("KuMincho-R.woff") format("woff"),
+    url("KuMincho-R.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Add any custom styles here */
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+body {
+  font-family: "KuMincho", serif;
+}
