@@ -9,9 +9,27 @@
     />
     <meta
       name="keywords"
-      content="Cantonese, linguistics, TTS, ASR, LLM, speech synthesis, speech recognition, language model, Yue Chinese, Cantonese Chinese, 粵語, 廣東話, 張悦楷, 講古語音, 講古佬, 講古, 語音數據集, Cantonese voice dataset, open-source, public domain, CC0"
+      content="Cantonese, linguistics, TTS, ASR, LLM, speech synthesis, speech recognition, language model, Yue Chinese, Cantonese Chinese, 粵語, 廣州話, 白話, 廣東話, 張悦楷, 講古語音, 講古佬, 講古, 語音數據集, speech dataset, open-source, public domain, CC0"
     />
     <meta name="author" content="張悦楷" />
+    <meta
+      property="og:title"
+      content="張悦楷講古語音數據集 The Zoeng Jyut Gaai Storytelling Voice Dataset"
+    />
+    <meta
+      property="og:description"
+      content="開源粵語語音數據集，適合語音識別、語音合成、大語言模型、語言學文學研究等應用 Open-sourced Cantonese voice dataset for ASR, TTS, LLM, linguistics research and more"
+    />
+    <meta
+      property="og:image"
+      content="https://canclid.github.io/zoengjyutgaai/zoengjyutgaai.webp"
+    />
+    <meta
+      property="og:url"
+      content="https://canclid.github.io/zoengjyutgaai/"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="zoengjyutgaai.webp" type="image/webp" />
     <title>張悦楷講古語音數據集</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -41,7 +59,11 @@
           The Zoeng Jyut Gaai Storytelling Voice Dataset
         </h1>
         <p class="text-2xl text-gray-500 my-12">
-          開源粵語語音數據集 Open-sourced Cantonese Voice Dataset
+          <span class="block mb-4"
+            >開源粵語語音數據集，適合語音識別、語音合成、大語言模型、語言學文學研究等應用</span
+          >
+          Open-sourced Cantonese voice dataset for ASR, TTS, LLM, linguistics
+          research and more
         </p>
       </header>
 
@@ -76,7 +98,7 @@
               Total Duration
             </h3>
             <p class="text-lg font-semibold m-4 text-black">
-              66.02 個鐘 hours <br />（3960.67 分鐘 minutes
+              66.02 個鐘 hours <br />（3960.67 分鐘 minutes）
             </p>
           </div>
           <div class="bg-white rounded-lg text-center my-12">
@@ -98,19 +120,18 @@
         <section class="col-span-2 mb-12">
           <h2 class="text-3xl my-8">介紹 Introduction</h2>
           <p class="text-gray-700 text-xl mb-4">
-            本數據集由廣州最出名嘅話劇演員、説書藝人（講古佬）張悦楷講《三國演義》錄音製成。所有錄音均錄於
-            1980
-            年代。數據集所有文本均由人工轉寫，並根據《三國演義》原文校對嚟確保準確性。
+            本數據集由廣州最出名嘅話劇演員、説書藝人（講古佬）張悦楷喺 1980
+            年代電台播講《三國演義》嘅錄音製成。數據集所有文本均由人工轉寫，並根據《三國演義》原文校對嚟確保準確性。
           </p>
-          <p class="text-gray-700 text-lg my-4">
+          <p class="text-gray-700 text-xl my-4">
             This dataset was made from recordings of Zoeng Jyut Gaai, the most
             famous drama actor and storyteller in Canton, storytelling
-            <em>Romance of the Three Kingdoms</em>. All recordings were recorded
-            in the 1980s. All texts in the dataset were transcribed manually and
-            proofread according to the original text of
-            <em>Romance of the Three Kingdoms </em> to ensure accuracy.
+            <em>Romance of the Three Kingdoms</em> during the 1980s. All texts
+            in the dataset were transcribed manually and proofread according to
+            the original text of <em>Romance of the Three Kingdoms </em> to
+            ensure accuracy.
           </p>
-          <p class="text-gray-700 text-lg my-4">
+          <p class="text-gray-700 text-xl my-4">
             本數據集可用於各種用途，例如語音合成（TTS）、語音識別（ASR）、語言模型（LLM）、語言學分析等等。<a
               href="https://huggingface.co/spaces/laubonghaudoi/zoengjyutgaai_tts"
               class="underline"
@@ -118,7 +139,7 @@
               張悦楷語音合成 </a
             >就係一個用本數據集訓練出嚟嘅 TTS 系統。
           </p>
-          <p class="text-gray-700 text-lg my-4">
+          <p class="text-gray-700 text-xl my-4">
             This dataset is multi-purposed. It can be used for Text-To-Speech
             (TTS), Automatic Speech Recognition (ASR), Language Modeling,
             linguistics analysis, etc. As an example,
@@ -163,53 +184,53 @@
           <h2 class="text-3xl my-16">下載 Download</h2>
           <div class="flex justify-center my-16">
             <a
-              href="https://huggingface.co/datasets/laubonghaudoi/zoengjyutgaai_saamgwokjinji"
+              href="https://huggingface.co/datasets/CanCLID/zoengjyutgaai_saamgwokjinji"
               target="_blank"
               class="bg-yellow-300 text-black text-xl px-8 py-4 hover:bg-black hover:text-white transition-colors"
             >
               前往 🤗 Hugging Face 下載
             </a>
           </div>
-          <p class="text-gray-700 text-lg">
+          <p class="text-gray-700 text-xl">
             如果你想單純克隆所有 wav 文件，可以用下面嘅命令嚟凈係克隆個
             <code>wav/</code> 路徑，避免 clone 晒成個 repo：
           </p>
-          <p class="text-gray-700 text-lg my-4">
+          <p class="text-gray-700 text-xl my-4">
             If you want to clone only the wav files without cloning the entire
             repo, use the following commands to clone the
             <code>wav/</code> directory only:
           </p>
           <pre
             class="text-nowrap p-4 bg-gray-100 overflow-auto my-4"
-          ><code>git clone --filter=blob:none --sparse https://huggingface.co/datasets/laubonghaudoi/zoengjyutgaai_saamgwokjinji
+          ><code>git clone --filter=blob:none --sparse https://huggingface.co/datasets/CanCLID/zoengjyutgaai_saamgwokjinji
 
 cd zoengjyutgaai_saamgwokjinji
 
 git sparse-checkout init --cone
 git sparse-checkout set wav
 git checkout</code></pre>
-          <p class="text-gray-700 text-lg my-4">
+          <p class="text-gray-700 text-xl my-4">
             所有文字轉寫都喺 <code>wav/metadata.csv</code>入面。
           </p>
-          <p class="text-gray-700 text-lg my-4">
+          <p class="text-gray-700 text-xl my-4">
             All text transcriptions are in
             <code>wav/metadata.csv</code>.
           </p>
 
           <h2 class="text-3xl my-12">説明 Info</h2>
-          <p class="text-lg mb-4">
+          <p class="text-xl mb-4">
             所有源字幕 SRT 文件都存放喺 Hugging Face
             倉庫嘅<code>srt/</code>路經下。所有源音頻都以 .webm 格式放喺
             <code>.webm/</code> 路經下。
           </p>
-          <p class="text-lg my-4">
+          <p class="text-xl my-4">
             All source subtitle SRT files are stored in the
             <code>srt/</code> directory of the Hugging Face repository. All
             source audio are stored in .webm format in the
             <code>.webm/</code> directory.
           </p>
 
-          <ul class="text-lg my-4 px-4 list-disc">
+          <ul class="text-xl my-4 px-4 list-disc">
             <li>
               所有文本都根據
               <a href="https://jyutping.org/blog/typo/" class="underline"
@@ -225,7 +246,7 @@ git checkout</code></pre>
             <li>所有文本都用漢字轉寫，無阿拉伯數字無英文字母</li>
             <li>所有音頻源都存放喺<code>/webm</code>下面</li>
           </ul>
-          <ul class="text-lg my-4 px-4 list-disc">
+          <ul class="text-xl my-4 px-4 list-disc">
             <li>
               All text are standardized with the orthography in
               <a href="https://jyutping.org/blog/typo/" class="underline"
@@ -355,17 +376,17 @@ git checkout</code></pre>
           </table>
 
           <h2 class="text-3xl my-12">引用 Citation</h2>
-          <p class="text-gray-700 text-lg">
+          <p class="text-gray-700 text-xl">
             本數據集屬公共領域，遵循
             <a href="https://creativecommons.org/public-domain/cc0/">CC0</a>
             許可聲明。即係話你可以無需授權免費任用本數據集，亦都唔需要註明出處。不過如果你用咗本數據集，我哋都希望你可以引用本頁面，作為對楷叔嘅懷念同致敬：
           </p>
-          <p class="text-gray-700 text-lg my-4">
+          <p class="text-gray-700 text-xl my-4">
             This dataset is in the public domain and follows the
             <a href="https://creativecommons.org/public-domain/cc0/">CC0</a>
             license agreement. This means you can use this dataset for free
             without attribution. However, if you use this dataset, we hope you
-            can cite this page as a tribute to Kai Suk:
+            can cite this page as a tribute to Gaai Suk:
           </p>
           <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto">
 @misc{zoengjyutgaai2025,
@@ -377,21 +398,21 @@ git checkout</code></pre>
           >
 
           <h2 class="text-3xl my-12">意見反饋 Feedback</h2>
-          <p class="text-gray-700 text-lg my-4">
+          <p class="text-gray-700 text-xl my-4">
             數據集建設難免有疏漏，如果你發現有任何錯誤、問題，或者有任何意見，歡迎喺
             <a
               class="underline"
-              href="https://huggingface.co/datasets/laubonghaudoi/zoengjyutgaai_saamgwokjinji/discussions"
+              href="https://huggingface.co/datasets/CanCLID/zoengjyutgaai_saamgwokjinji/discussions"
             >
               Hugging Face 討論區 </a
             >提出。
           </p>
-          <p class="text-gray-700 text-lg my-4">
+          <p class="text-gray-700 text-xl my-4">
             Dataset construction is inevitably flawed. If you find any errors,
             problems, or have any suggestions, feel free to raise them in the
             <a
               class="underline"
-              href="https://huggingface.co/datasets/laubonghaudoi/zoengjyutgaai_saamgwokjinji/discussions"
+              href="https://huggingface.co/datasets/CanCLID/zoengjyutgaai_saamgwokjinji/discussions"
             >
               Hugging Face discussion forum</a
             >.
