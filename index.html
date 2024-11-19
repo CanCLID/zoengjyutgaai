@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="yue">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="zoengjyutgaai.webp" type="image/webp" />
+    <title>張悦楷講古語音數據集</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              kumincho: ["KuMincho", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body class="bg-white">
+    <div class="container mx-auto my-16 px-4 py-8 max-w-6xl">
+      <!-- Header -->
+      <header class="text-center mb-16">
+        <h1 class="text-5xl text-black mb-4 font-kumincho">
+          <span class="block mb-8">張悦楷講古語音數據集</span>
+          The Zoeng Jyut Gaai Storytelling Voice Dataset
+        </h1>
+        <p class="text-2xl text-gray-500 my-12">
+          開源粵語語音數據集 Open-sourced Cantonese Voice Dataset
+        </p>
+      </header>
+
+      <!-- Main Content -->
+      <main class="grid grid-cols-1 sm:grid-cols-4 gap-0">
+        <!-- Dataset Description -->
+        <section class="col-span-1 bg-white rounded-lg">
+          <div class="bg-white rounded-lg text-center my-12">
+            <h3 class="text-2xl text-gray-500">
+              授權許可 <br />
+              License
+            </h3>
+            <p class="text-lg font-semibold m-4 text-black">
+              CC0 公共領域 <br />
+              Public Domain
+            </p>
+          </div>
+          <div class="bg-white rounded-lg text-center mt-4 mb-12">
+            <h3 class="text-2xl text-gray-500">
+              語言 <br />
+              Language
+            </h3>
+            <p class="text-lg font-semibold m-4 text-black">
+              粵語 <br />
+              Cantonese <br />
+              ISO 639-3: <code>yue</code>
+            </p>
+          </div>
+          <div class="bg-white rounded-lg text-center my-12">
+            <h3 class="text-2xl text-gray-500">
+              總時長 <br />
+              Total Duration
+            </h3>
+            <p class="text-lg font-semibold m-4 text-black">
+              66.02 個鐘（3961.17 分鐘）<br />
+              66.02 hours (3961.17 minutes)
+            </p>
+          </div>
+          <div class="bg-white rounded-lg text-center my-12">
+            <h3 class="text-2xl text-gray-500">
+              總字數（含標點） <br />
+              Total Characters # (including punctuation)
+            </h3>
+            <p class="text-lg font-semibold m-4 text-black">985,989</p>
+          </div>
+          <div class="bg-white rounded-lg text-center my-12">
+            <h3 class="text-2xl text-gray-500">
+              發音人 <br />
+              Voice Actor
+            </h3>
+            <p class="text-lg font-semibold m-4 text-black">張悦楷</p>
+          </div>
+        </section>
+        <!-- Dataset Stats -->
+        <section class="col-span-3 mb-12">
+          <h2 class="text-3xl my-8">介紹 Introduction</h2>
+          <p class="text-gray-700 text-lg mb-4">
+            本數據集由廣州最出名嘅話劇演員、説書藝人（講古佬）張悦楷講《三國演義》錄音製成。所有錄音均錄於
+            1980
+            年代。數據集所有文本均由人工轉寫，並根據《三國演義》原文校對嚟確保準確性。
+          </p>
+          <p class="text-gray-700 text-lg my-4">
+            This dataset was made from recordings of Zoeng Jyut Gaai, the most
+            famous drama actor and storyteller in Canton, storytelling
+            <em>Romance of the Three Kingdoms</em>. All recordings were recorded
+            in the 1980s. All texts in the dataset were transcribed manually and
+            proofread according to the original text of
+            <em>Romance of the Three Kingdoms </em> to ensure accuracy.
+          </p>
+          <p class="text-gray-700 text-lg my-4">
+            本數據集可用於各種用途，例如語音合成（TTS）、語音識別（ASR）、語言模型（LLM）、語言學分析等等。<a
+              href="https://huggingface.co/spaces/laubonghaudoi/zoengjyutgaai_tts"
+              class="underline"
+            >
+              張悦楷語音合成 </a
+            >就係一個用本數據集訓練出嚟嘅 TTS 系統。
+          </p>
+          <p class="text-gray-700 text-lg my-4">
+            This dataset is multi-purposed. It can be used for Text-To-Speech
+            (TTS), Automatic Speech Recognition (ASR), Language Modeling,
+            linguistics analysis, etc. As an example,
+            <a
+              href="https://huggingface.co/spaces/laubonghaudoi/zoengjyutgaai_tts"
+              class="underline"
+            >
+              張悦楷語音合成
+            </a>
+            is a TTS system trained on this dataset.
+          </p>
+          <h2 class="text-3xl my-12">數據樣例 Data samples</h2>
+          <div class="px-8 py-4 mb-8 border-solid border-black border-2">
+            <div class="my-4">
+              <audio controls class="w-full">
+                <source src="029_201.wav" type="audio/wav" />
+                瀏覽器唔支援音頻
+              </audio>
+              <p class="text-xl my-4 text-gray-700">
+                當今天下嘅英雄，就係使君你，同我喇。
+              </p>
+            </div>
+            <div class="my-8">
+              <audio controls class="w-full">
+                <source src="074_222.wav" type="audio/wav" />
+                瀏覽器唔支援音頻
+              </audio>
+              <p class="text-xl my-4 text-gray-700">
+                唉！既生瑜，何生亮！既生瑜，何生亮！既生瑜，何生亮啊！
+              </p>
+            </div>
+            <div class="my-4">
+              <audio controls class="w-full">
+                <source src="121_097.wav" type="audio/wav" />
+                瀏覽器唔支援音頻
+              </audio>
+              <p class="text-xl my-4 text-gray-700">
+                王朗講完，孔明喺架車上哈哈大笑佢話：哈哈哈哈哈哈哈哈，我仲以為堂堂漢朝嘅大老元臣，所講嘅道理必定十分高明嘅，點估到竟然如此卑鄙啊！
+              </p>
+            </div>
+          </div>
+          <h2 class="text-3xl my-16">下載 Download</h2>
+          <div class="flex justify-center my-16">
+            <a
+              href="https://huggingface.co/datasets/laubonghaudoi/zoengjyutgaai_saamgwokjinji"
+              target="_blank"
+              class="bg-yellow-300 text-black text-xl px-8 py-4 hover:bg-black hover:text-white transition-colors"
+            >
+              前往 🤗 Hugging Face 下載
+            </a>
+          </div>
+          <p class="text-gray-700 text-lg">
+            如果你想單純克隆所有 wav 文件，可以用下面嘅命令嚟凈係克隆個
+            <code>wav/</code> 路徑，避免 clone 晒成個 repo：
+          </p>
+          <p class="text-gray-700 text-lg my-4">
+            If you want to clone only the wav files without cloning the entire
+            repo, use the following commands to clone the
+            <code>wav/</code> directory only:
+          </p>
+          <pre
+            class="text-nowrap p-4 bg-gray-100 overflow-auto my-4"
+          ><code>git clone --filter=blob:none --sparse https://huggingface.co/datasets/laubonghaudoi/zoengjyutgaai_saamgwokjinji
+
+cd zoengjyutgaai_saamgwokjinji
+
+git sparse-checkout init --cone
+git sparse-checkout set wav
+git checkout</code></pre>
+          <p class="text-gray-700 text-lg my-4">
+            所有文字轉寫都喺 <code>wav/metadata.csv</code>入面。
+          </p>
+          <p class="text-gray-700 text-lg my-4">
+            All text transcriptions are in
+            <code>wav/metadata.csv</code>.
+          </p>
+
+          <h2 class="text-3xl my-12">説明 Info</h2>
+          <p class="text-lg mb-4">
+            所有源字幕 SRT 文件都存放喺 Hugging Face
+            倉庫嘅<code>srt/</code>路經下。所有源音頻都以 .webm 格式放喺
+            <code>.webm/</code> 路經下。
+          </p>
+          <p class="text-lg my-4">
+            All source subtitle SRT files are stored in the
+            <code>srt/</code> directory of the Hugging Face repository. All
+            source audio are stored in .webm format in the
+            <code>.webm/</code> directory.
+          </p>
+
+          <ul class="text-lg my-4 px-4 list-disc">
+            <li>
+              所有文本都根據
+              <a href="https://jyutping.org/blog/typo/" class="underline"
+                >jyutping.org/blog/typo</a
+              >
+              同
+              <a href="https://jyutping.org/blog/particles/" class="underline">
+                jyutping.org/blog/particles/
+              </a>
+              規範用字
+            </li>
+            <li>所有文本都使用全角標點，冇半角標點</li>
+            <li>所有文本都用漢字轉寫，無阿拉伯數字無英文字母</li>
+            <li>所有音頻源都存放喺<code>/webm</code>下面</li>
+          </ul>
+          <ul class="text-lg my-4 px-4 list-disc">
+            <li>
+              All text are standardized with the orthography in
+              <a href="https://jyutping.org/blog/typo/" class="underline"
+                >jyutping.org/blog/typo</a
+              >
+              and
+              <a
+                href="https://jyutping.org/blog/typo/"
+                class="underline"
+                <a
+                href="https://jyutping.org/blog/particles/"
+              >
+                jyutping.org/blog/particles/
+              </a>
+            </li>
+            <li>
+              All text use full-width punctuations and has no half-width
+              punctuations.
+            </li>
+            <li>
+              All text is in Chinese characters, no Latin letters or Arabic
+              numbers.
+            </li>
+            <li>
+              All source audios are stored in
+              <code>/webm</code>.
+            </li>
+          </ul>
+
+          <h2 class="text-3xl my-12">數據統計 Statistics</h2>
+          <table
+            class="table-auto w-full my-8 border-2 border-black border-collapse"
+          >
+            <thead></thead>
+            <tbody>
+              <tr>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  總時長 Total Duration
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  66.02 個鐘 hours（3961.17 分鐘 minutes）
+                </td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  平均音頻時長 Average Clip Duration
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  6.071 秒 seconds
+                </td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  中位音頻時長 Median Clip Duration
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  5.6 秒 seconds
+                </td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  最短音頻時長 Min Clip Duration
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  0.339 秒 seconds
+                </td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  最長音頻時長 Max Clip Duration
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  100.268 秒 seconds
+                </td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  平均每句字數（含標點） Average Characters Per Clip (including
+                  punctuation)
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  24.01
+                </td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  中位每句字數（含標點） Median Characters Per Clip (including
+                  punctuation)
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  23
+                </td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  文本總字數（含標點） Total Characters # (including
+                  punctuation)
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  985989
+                </td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  覆蓋漢字數 Unique Chinese Characters #
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  3993
+                </td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  採樣率 Sampling Rate
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  44100 Hz
+                </td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  音頻文件格式 Audio file format
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  .wav
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 class="text-3xl my-12">引用 Citation</h2>
+          <p class="text-gray-700 text-lg">
+            本數據集屬公共領域，遵循
+            <a href="https://creativecommons.org/public-domain/cc0/">CC0</a>
+            許可聲明。即係話你可以無需授權免費任用本數據集，亦都唔需要註明出處。不過如果你用咗本數據集，我哋都希望你可以引用本頁面，作為對楷叔嘅懷念同致敬：
+          </p>
+          <p class="text-gray-700 text-lg my-4">
+            This dataset is in the public domain and follows the
+            <a href="https://creativecommons.org/public-domain/cc0/">CC0</a>
+            license agreement. This means you can use this dataset for free
+            without attribution. However, if you use this dataset, we hope you
+            can cite this page as a tribute to Kai Suk:
+          </p>
+          <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto">
+@misc{zoengjyutgaai2025,
+    title={張悦楷講古語音數據集 The Zoeng Jyut Gaai Storytelling Voice Dataset},
+    author={粵語計算語言學基礎建設組 Cantonese Computational Linguistics Infrastructure Development Workgroup (CanCLID)},
+    howpublished = {\url{https://canclid.github.io/zoengjyutgaai/}},
+    year={2025}
+}</pre
+          >
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="mt-12 text-center">
+        <img
+          src="zoengjyutgaai.webp"
+          alt="張悦楷"
+          class="w-64 h-64 rounded-full mx-auto mb-16 object-cover"
+        />
+        <div class="flex flex-col items-center gap-4">
+          <div class="flex items-center gap-4">
+            <a
+              href="https://github.com/CanCLID"
+              target="_blank"
+              class="text-gray-600 hover:text-black"
+              title="GitHub"
+            >
+              <i class="fab fa-github text-2xl"></i>
+            </a>
+            <a
+              href="https://twitter.com/CanCLID"
+              target="_blank"
+              class="text-gray-600 hover:text-black"
+              title="Twitter"
+            >
+              <i class="fab fa-twitter text-2xl"></i>
+            </a>
+          </div>
+          <p class="text-gray-600 text-lg">
+            粵語計算語言學基礎建設組 Cantonese Computational Linguistics
+            Infrastructure Development Workgroup (CanCLID)
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
