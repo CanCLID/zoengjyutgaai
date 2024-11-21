@@ -209,12 +209,10 @@ git init
 git remote add origin https://huggingface.co/datasets/CanCLID/zoengjyutgaai_saamgwokjinji
 git sparse-checkout init --cone
 
-# 指定凈係下載個別路徑
-# Tell git which directory you want
+# 指定凈係下載個別路徑 Tell git which directory you want
 git sparse-checkout set wav
 
-# 開始下載
-# Pull the content
+# 開始下載 Pull the content
 git pull origin main</code></pre>
           <p class="text-gray-700 text-xl my-4">
             所有文字轉寫都喺 <code>wav/metadata.csv</code>入面。
