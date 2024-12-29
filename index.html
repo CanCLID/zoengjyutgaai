@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="張悦楷講古語音數據集 - The Zoeng Jyut Gaai Storytelling Voice Dataset. A high-quality, artistic and expressive Cantonese speech dataset for TTS, ASR, LLM, and linguistic analysis."
+      content="張悦楷講古語音數據集 - The Zoeng Jyut Gaai Storytelling Speech Dataset. A high-quality, artistic and expressive Cantonese speech dataset for TTS, ASR, LLM, and linguistic analysis."
     />
     <meta
       name="keywords"
@@ -14,11 +14,11 @@
     <meta name="author" content="張悦楷" />
     <meta
       property="og:title"
-      content="張悦楷講古語音數據集 The Zoeng Jyut Gaai Storytelling Voice Dataset"
+      content="張悦楷講古語音數據集 The Zoeng Jyut Gaai Storytelling Speech Dataset"
     />
     <meta
       property="og:description"
-      content="開源粵語語音數據集，適合語音識別、語音合成、大語言模型、語言學文學研究等應用 Open-sourced Cantonese voice dataset for ASR, TTS, LLM, linguistics research and more"
+      content="開源粵語語音數據集，適合語音識別、語音合成、大語言模型、語言學文學研究等應用 Open-sourced Cantonese speech dataset for ASR, TTS, LLM, linguistics research and more"
     />
     <meta
       property="og:image"
@@ -56,13 +56,13 @@
       <header class="text-center mb-16">
         <h1 class="text-5xl text-black mb-4 font-kumincho">
           <span class="block mb-8">張悦楷講古語音數據集</span>
-          The Zoeng Jyut Gaai Storytelling Voice Dataset
+          The Zoeng Jyut Gaai Story-telling Speech Dataset
         </h1>
         <p class="text-2xl text-gray-500 my-12">
           <span class="block mb-4"
             >開源粵語語音數據集，適合語音識別、語音合成、大語言模型、語言學文學研究等應用</span
           >
-          Open-sourced Cantonese voice dataset for ASR, TTS, LLM, linguistics
+          Open-sourced Cantonese speech dataset for ASR, TTS, LLM, linguistics
           research and more
         </p>
       </header>
@@ -192,13 +192,13 @@
             </a>
           </div>
           <p class="text-gray-700 text-xl">
-            如果你想單純克隆所有 wav 文件，可以用下面嘅命令嚟凈係克隆個
-            <code>wav/</code> 路徑，避免 clone 晒成個 repo：
+            如果你想單純克隆所有切分後嘅 opus 文件，可以用下面嘅命令嚟凈係克隆個
+            <code>opus/</code> 路徑，避免克隆晒成個倉庫：
           </p>
           <p class="text-gray-700 text-xl my-4">
             If you want to clone only the wav files without cloning the entire
             repo, use the following commands to clone the
-            <code>wav/</code> directory only:
+            <code>opus/</code> directory only:
           </p>
           <pre
             class="text-nowrap p-4 bg-gray-100 overflow-auto my-4"
@@ -210,12 +210,13 @@ git remote add origin https://huggingface.co/datasets/CanCLID/zoengjyutgaai_saam
 git sparse-checkout init --cone
 
 # 指定凈係下載個別路徑 Tell git which directory you want
-git sparse-checkout set wav
+git sparse-checkout set opus
 
 # 開始下載 Pull the content
 git pull origin main</code></pre>
           <p class="text-gray-700 text-xl my-4">
-            所有文字轉寫都喺 <code>wav/metadata.csv</code>入面。
+            所有文字轉寫都喺 <code>opus/saamgwokjinji/metadata.csv</code> 同
+            <code>opus/seoiwuzyun/metadata.csv</code>入面。
           </p>
           <p class="text-gray-700 text-xl my-4">
             All text transcriptions are in
@@ -225,14 +226,18 @@ git pull origin main</code></pre>
           <h2 class="text-3xl my-12">説明 Info</h2>
           <p class="text-xl mb-4">
             所有源字幕 SRT 文件都存放喺 Hugging Face
-            倉庫嘅<code>srt/</code>路經下。所有源音頻都以 .webm 格式放喺
-            <code>.webm/</code> 路經下。
+            倉庫嘅<code>srt/</code>路經下。為咗節省儲存空間，所有源音頻都已經轉成
+            opus 格式放喺
+            <code>source/</code> 路經下，切分好嘅句子音頻都放喺
+            <code>opus/</code>
+            路經下。
           </p>
           <p class="text-xl my-4">
             All source subtitle SRT files are stored in the
-            <code>srt/</code> directory of the Hugging Face repository. All
-            source audio are stored in .webm format in the
-            <code>.webm/</code> directory.
+            <code>srt/</code> directory of the Hugging Face repository. In order
+            to save space, all source audio are stored in opus format in the
+            <code>source/</code> directory, cut sentence audios are stored in
+            the <code>opus/</code> directory.
           </p>
 
           <ul class="text-xl my-4 px-4 list-disc">
@@ -249,11 +254,10 @@ git pull origin main</code></pre>
             </li>
             <li>所有文本都使用全角標點，冇半角標點</li>
             <li>所有文本都用漢字轉寫，無阿拉伯數字無英文字母</li>
-            <li>所有音頻源都存放喺<code>/webm</code>下面</li>
           </ul>
           <ul class="text-xl my-4 px-4 list-disc">
             <li>
-              All text are standardized with the orthography in
+              All texts are standardized with the orthography in
               <a href="https://jyutping.org/blog/typo/" class="underline"
                 >jyutping.org/blog/typo</a
               >
@@ -273,10 +277,6 @@ git pull origin main</code></pre>
             <li>
               All text is in Chinese characters, no Latin letters or Arabic
               numbers.
-            </li>
-            <li>
-              All source audios are stored in
-              <code>/webm</code>.
             </li>
           </ul>
 
@@ -375,7 +375,7 @@ git pull origin main</code></pre>
                   採樣率 Sampling Rate
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  44100 Hz
+                  48000 Hz
                 </td>
               </tr>
               <tr>
@@ -383,7 +383,7 @@ git pull origin main</code></pre>
                   音頻文件格式 Audio file format
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  .wav
+                  .opus
                 </td>
               </tr>
             </tbody>
@@ -404,8 +404,8 @@ git pull origin main</code></pre>
           </p>
           <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto">
 @misc{zoengjyutgaai2025,
-    title={張悦楷講古語音數據集 The Zoeng Jyut Gaai Storytelling Voice Dataset},
-    author={粵語計算語言學基礎建設組 Cantonese Computational Linguistics Infrastructure Development Workgroup (CanCLID)},
+    title={The Zoeng Jyut Gaai Story-telling Speech Dataset},
+    author={Cantonese Computational Linguistics Infrastructure Development Workgroup (CanCLID)},
     howpublished = {\url{https://canclid.github.io/zoengjyutgaai/}},
     year={2025}
 }</pre
