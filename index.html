@@ -98,15 +98,15 @@
               Total Duration
             </h3>
             <p class="text-lg font-semibold m-4 text-black">
-              66.01 個鐘 hours <br />（3960.77 分鐘 minutes）
+              104.64 個鐘 hours <br />（6278.20 分鐘 minutes）
             </p>
           </div>
           <div class="bg-white rounded-lg text-center my-12">
             <h3 class="text-2xl text-gray-500">
               總字數（含標點） <br />
-              Total Characters # (including punctuation)
+              Total # Characters (including punctuation)
             </h3>
-            <p class="text-lg font-semibold m-4 text-black">952427</p>
+            <p class="text-lg font-semibold m-4 text-black">1,561,789</p>
           </div>
           <div class="bg-white rounded-lg text-center my-12">
             <h3 class="text-2xl text-gray-500">
@@ -184,7 +184,7 @@
           <h2 class="text-3xl my-16">下載 Download</h2>
           <div class="flex justify-center my-16">
             <a
-              href="https://huggingface.co/datasets/CanCLID/zoengjyutgaai_saamgwokjinji"
+              href="https://huggingface.co/datasets/CanCLID/zoengjyutgaai"
               target="_blank"
               class="bg-yellow-300 text-black text-xl px-8 py-4 hover:bg-black hover:text-white transition-colors"
             >
@@ -202,11 +202,11 @@
           </p>
           <pre
             class="text-nowrap p-4 bg-gray-100 overflow-auto my-4"
-          ><code>mkdir zoengjyutgaai_saamgwokjinji
-cd zoengjyutgaai_saamgwokjinji
+          ><code>mkdir zoengjyutgaai
+cd zoengjyutgaai
 git init
 
-git remote add origin https://huggingface.co/datasets/CanCLID/zoengjyutgaai_saamgwokjinji
+git remote add origin https://huggingface.co/datasets/CanCLID/zoengjyutgaai
 git sparse-checkout init --cone
 
 # 指定凈係下載個別路徑 Tell git which directory you want
@@ -254,6 +254,7 @@ git pull origin main</code></pre>
             </li>
             <li>所有文本都使用全角標點，冇半角標點</li>
             <li>所有文本都用漢字轉寫，無阿拉伯數字無英文字母</li>
+            <li>所有音頻都轉為 opus 格式，48000 採樣率</li>
           </ul>
           <ul class="text-xl my-4 px-4 list-disc">
             <li>
@@ -278,67 +279,121 @@ git pull origin main</code></pre>
               All text is in Chinese characters, no Latin letters or Arabic
               numbers.
             </li>
+            <li>All audios are in opus format, 48000 sampling rate.</li>
           </ul>
 
           <h2 class="text-3xl my-12">數據統計 Statistics</h2>
           <table
-            class="table-auto w-full my-8 border-2 border-black border-collapse"
+            class="table-auto w-full my-8 border-2 border-black border-collapse table-auto"
           >
-            <thead></thead>
+            <thead>
+              <tr>
+                <th></th>
+                <th class="border px-4 py-2 border-black border-0 text-lg">
+                  全集 Full
+                </th>
+                <th class="border px-4 py-2 border-black border-0 text-lg">
+                  三國演義 saamgwokjinji
+                </th>
+                <th class="border px-4 py-2 border-black border-0 text-lg">
+                  水滸傳 seoiwuzyun
+                </th>
+              </tr>
+            </thead>
             <tbody>
               <tr>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  總時長 Total Duration
+                  總時長 Total Duration (個鐘 hours | 分鐘 minutes)
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  66.01 個鐘 hours（3960.73 分鐘 minutes）
-                </td>
-              </tr>
-              <tr>
-                <td class="border px-4 py-2 border-black border-0 text-lg">
-                  平均音頻時長 Average Clip Duration
+                  104.64 | 6278.20
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  6.067 秒 seconds
+                  66.01 | 3960.73
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  38.62 | 2317.43
                 </td>
               </tr>
               <tr>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  中位音頻時長 Median Clip Duration
+                  平均音頻時長 Average Clip Duration (秒 seconds)
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  5.607 秒 seconds
-                </td>
-              </tr>
-              <tr>
-                <td class="border px-4 py-2 border-black border-0 text-lg">
-                  最短音頻時長 Min Clip Duration
+                  5.893
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  0.339 秒 seconds
+                  6.067
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  5.619
                 </td>
               </tr>
               <tr>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  最長音頻時長 Max Clip Duration
+                  中位音頻時長 Median Clip Duration (秒 seconds)
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  31.822 秒 seconds
+                  5.436
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  5.607
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  5.198
                 </td>
               </tr>
               <tr>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  平均每句字數（含標點） Average Characters Per Clip (including
-                  punctuation)
+                  最短音頻時長 Min Clip Duration (秒 seconds)
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  0.322
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  0.339
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  0.322
+                </td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  最長音頻時長 Max Clip Duration (秒 seconds)
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  33.144
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  31.822
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  33.144
+                </td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  平均每句字數，含標點 Average Characters Per Clip, including
+                  punctuation
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  24.33
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   24.00
                 </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  24.86
+                </td>
               </tr>
               <tr>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  中位每句字數（含標點） Median Characters Per Clip (including
-                  punctuation)
+                  中位每句字數，含標點 Median Characters Per Clip, including
+                  punctuation
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg"></td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  23
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   23
@@ -346,11 +401,16 @@ git pull origin main</code></pre>
               </tr>
               <tr>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  文本總字數（含標點） Total Characters # (including
-                  punctuation)
+                  文本總字數，含標點 Total Characters, including punctuation
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  1561789
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   952427
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  621682
                 </td>
               </tr>
               <tr>
@@ -358,32 +418,28 @@ git pull origin main</code></pre>
                   覆蓋漢字數 Unique Chinese Characters Coverage
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
+                  4406
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
                   3993
                 </td>
-              </tr>
-              <tr>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  平均語速（含標點） Average Speaking Rate (including
-                  punctuation)
-                </td>
-                <td class="border px-4 py-2 border-black border-0 text-lg">
-                  4.01 字/秒 characters per second
+                  3520
                 </td>
               </tr>
               <tr>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  採樣率 Sampling Rate
+                  平均語速，含標點 Average Speaking Rate, including punctuation
+                  (字/秒 characters per second)
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  48000 Hz
-                </td>
-              </tr>
-              <tr>
-                <td class="border px-4 py-2 border-black border-0 text-lg">
-                  音頻文件格式 Audio file format
+                  4.15
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  .opus
+                  3.96
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  4.47
                 </td>
               </tr>
             </tbody>
@@ -416,7 +472,7 @@ git pull origin main</code></pre>
             數據集建設難免有疏漏，如果你發現有任何錯誤、問題，或者有任何意見，歡迎喺
             <a
               class="underline"
-              href="https://huggingface.co/datasets/CanCLID/zoengjyutgaai_saamgwokjinji/discussions"
+              href="https://huggingface.co/datasets/CanCLID/zoengjyutgaai/discussions"
             >
               Hugging Face 討論區 </a
             >提出。
@@ -426,7 +482,7 @@ git pull origin main</code></pre>
             problems, or have any suggestions, feel free to raise them in the
             <a
               class="underline"
-              href="https://huggingface.co/datasets/CanCLID/zoengjyutgaai_saamgwokjinji/discussions"
+              href="https://huggingface.co/datasets/CanCLID/zoengjyutgaai/discussions"
             >
               Hugging Face discussion forum</a
             >.
