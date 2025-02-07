@@ -98,7 +98,7 @@
               Total Duration
             </h3>
             <p class="text-lg font-semibold m-4 text-black">
-              104.64 個鐘 hours <br />（6278.20 分鐘 minutes）
+              110.10 個鐘 hours <br />（6605.83 分鐘 minutes）
             </p>
           </div>
           <div class="bg-white rounded-lg text-center my-12">
@@ -106,7 +106,7 @@
               總字數（含標點） <br />
               Total # Characters (including punctuation)
             </h3>
-            <p class="text-lg font-semibold m-4 text-black">1,561,789</p>
+            <p class="text-lg font-semibold m-4 text-black">1,642,902</p>
           </div>
           <div class="bg-white rounded-lg text-center my-12">
             <h3 class="text-2xl text-gray-500">
@@ -121,15 +121,16 @@
           <h2 class="text-3xl my-8">介紹 Introduction</h2>
           <p class="text-gray-700 text-xl mb-4">
             本數據集由廣州最出名嘅話劇演員、説書藝人（講古佬）張悦楷喺 1980
-            年代電台播講《三國演義》嘅錄音製成。數據集所有文本均由人工轉寫，並根據《三國演義》原文校對嚟確保準確性。
+            年代電台播講《三國演義》《水滸傳》《走進毛澤東的最後歲月》嘅錄音製成。數據集所有文本均由人工轉寫，並根據原文校對嚟確保準確性。
           </p>
           <p class="text-gray-700 text-xl my-4">
             This dataset was made from recordings of Zoeng Jyut Gaai, the most
             famous drama actor and storyteller in Canton, storytelling
-            <em>Romance of the Three Kingdoms</em> during the 1980s. All texts
-            in the dataset were transcribed manually and proofread according to
-            the original text of <em>Romance of the Three Kingdoms </em> to
-            ensure accuracy.
+            <em>Romance of the Three Kingdoms</em>, <em>Water Margin</em> and
+            <em>The Final Days of Mao Zedong</em> during the 1980s. All texts in
+            the dataset were transcribed manually and proofread according to the
+            original text of <em>Romance of the Three Kingdoms </em> to ensure
+            accuracy.
           </p>
           <p class="text-gray-700 text-xl my-4">
             本數據集可用於各種用途，例如語音合成（TTS）、語音識別（ASR）、語言模型（LLM）、語言學分析等等。<a
@@ -290,13 +291,16 @@ git pull origin main</code></pre>
               <tr>
                 <th></th>
                 <th class="border px-4 py-2 border-black border-0 text-lg">
-                  全集 Full
+                  全集 Total
                 </th>
                 <th class="border px-4 py-2 border-black border-0 text-lg">
                   三國演義 saamgwokjinji
                 </th>
                 <th class="border px-4 py-2 border-black border-0 text-lg">
                   水滸傳 seoiwuzyun
+                </th>
+                <th class="border px-4 py-2 border-black border-0 text-lg">
+                  走進毛澤東的最後歲月 mouzaakdung
                 </th>
               </tr>
             </thead>
@@ -306,7 +310,7 @@ git pull origin main</code></pre>
                   總時長 Total Duration (個鐘 hours | 分鐘 minutes)
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  104.64 | 6278.20
+                  110.10 | 6605.83
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   66.01 | 3960.73
@@ -314,13 +318,16 @@ git pull origin main</code></pre>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   38.62 | 2317.43
                 </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  5.46 | 327.62
+                </td>
               </tr>
               <tr>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   平均音頻時長 Average Clip Duration (秒 seconds)
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  5.893
+                  5.899
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   6.067
@@ -328,19 +335,25 @@ git pull origin main</code></pre>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   5.619
                 </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  6.004
+                </td>
               </tr>
               <tr>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   中位音頻時長 Median Clip Duration (秒 seconds)
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  5.436
+                  5.441
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   5.607
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   5.198
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  5.546
                 </td>
               </tr>
               <tr>
@@ -356,6 +369,9 @@ git pull origin main</code></pre>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   0.322
                 </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  0.925
+                </td>
               </tr>
               <tr>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
@@ -370,6 +386,9 @@ git pull origin main</code></pre>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   33.144
                 </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  19.040
+                </td>
               </tr>
               <tr>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
@@ -377,13 +396,16 @@ git pull origin main</code></pre>
                   punctuation
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  24.33
+                  24.35
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   24.00
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   24.86
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  24.77
                 </td>
               </tr>
               <tr>
@@ -400,13 +422,16 @@ git pull origin main</code></pre>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   23
                 </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  23
+                </td>
               </tr>
               <tr>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   文本總字數，含標點 Total Characters, including punctuation
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  1561789
+                  1642902
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   952427
@@ -414,19 +439,25 @@ git pull origin main</code></pre>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   621682
                 </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  81113
+                </td>
               </tr>
               <tr>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   覆蓋漢字數 Unique Chinese Characters Coverage
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  4406
+                  4562
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   3993
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   3520
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  2538
                 </td>
               </tr>
               <tr>
@@ -442,6 +473,9 @@ git pull origin main</code></pre>
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   4.47
+                </td>
+                <td class="border px-4 py-2 border-black border-0 text-lg">
+                  4.13
                 </td>
               </tr>
             </tbody>
