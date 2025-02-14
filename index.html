@@ -49,6 +49,14 @@
       };
     </script>
     <link href="styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </head>
   <body class="bg-white">
     <div class="container mx-auto my-16 px-4 py-8 max-w-7xl">
@@ -98,7 +106,7 @@
               Total Duration
             </h3>
             <p class="text-lg font-semibold m-4 text-black">
-              110.10 個鐘 hours <br />（6605.83 分鐘 minutes）
+              112.54 個鐘 hours <br />（6752.70 分鐘 minutes）
             </p>
           </div>
           <div class="bg-white rounded-lg text-center my-12">
@@ -106,7 +114,7 @@
               總字數（含標點） <br />
               Total # Characters (including punctuation)
             </h3>
-            <p class="text-lg font-semibold m-4 text-black">1,642,902</p>
+            <p class="text-lg font-semibold m-4 text-black">1,679,097</p>
           </div>
           <div class="bg-white rounded-lg text-center my-12">
             <h3 class="text-2xl text-gray-500">
@@ -193,17 +201,38 @@
               前往 🤗 Hugging Face 下載
             </a>
           </div>
+
           <p class="text-gray-700 text-xl">
-            如果你想單純克隆所有切分後嘅 opus 文件，可以用下面嘅命令嚟凈係克隆個
+            如果想單純將 <code>opus/</code> 入面所有嘢下載落嚟，可以跑下面嘅
+            Python 代碼，注意要安裝
+            <code>pip install --upgrade huggingface_hub</code> 先：
+          </p>
+          <p class="text-gray-700 text-xl my-4">
+            If you want to download the
+            <code>opus/</code> directory only, run the following Python code.
+            Make sure you have installed
+            <code>pip install --upgrade huggingface_hub</code> first:
+          </p>
+          <pre
+            class="text-nowrap p-4 bg-gray-100 overflow-auto my-4 language-python"
+          ><code>from huggingface_hub import snapshot_download
+
+# 如果淨係想下載啲字幕或者源音頻，就將 `opus/*` 改成 `srt/*` 或者 `source/*`
+# If you only want to download subtitles or source audio, change `opus/*` to `srt/*` or `source/*`
+snapshot_download(repo_id="CanCLID/zoengjyutgaai",allow_patterns="opus/*",local_dir="./",repo_type="dataset")            
+</code></pre>
+
+          <p class="text-gray-700 text-xl">
+            如果唔想用 Python ，可以用下面嘅命令嚟凈係克隆個
             <code>opus/</code> 路徑，避免克隆晒成個倉庫：
           </p>
           <p class="text-gray-700 text-xl my-4">
-            If you want to clone only the wav files without cloning the entire
-            repo, use the following commands to clone the
+            If you don't want to use Python, use the following commands to clone
+            the
             <code>opus/</code> directory only:
           </p>
           <pre
-            class="text-nowrap p-4 bg-gray-100 overflow-auto my-4"
+            class="text-nowrap p-4 bg-gray-100 overflow-auto my-4 language-bash"
           ><code>mkdir zoengjyutgaai
 cd zoengjyutgaai
 git init
@@ -311,7 +340,7 @@ git pull origin main</code></pre>
                   總時長 Total Duration (個鐘 hours | 分鐘 minutes)
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  110.10 | 6605.83
+                  112.10 | 6752.70
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   66.01 | 3960.73
@@ -320,7 +349,7 @@ git pull origin main</code></pre>
                   38.62 | 2317.43
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  5.46 | 327.62
+                  7.91 | 474.49
                 </td>
               </tr>
               <tr>
@@ -328,7 +357,7 @@ git pull origin main</code></pre>
                   平均音頻時長 Average Clip Duration (秒 seconds)
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  5.899
+                  5.901
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   6.067
@@ -345,7 +374,7 @@ git pull origin main</code></pre>
                   中位音頻時長 Median Clip Duration (秒 seconds)
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  5.441
+                  5.443
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   5.607
@@ -354,7 +383,7 @@ git pull origin main</code></pre>
                   5.198
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  5.546
+                  5.553
                 </td>
               </tr>
               <tr>
@@ -371,7 +400,7 @@ git pull origin main</code></pre>
                   0.322
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  0.925
+                  0.735
                 </td>
               </tr>
               <tr>
@@ -388,7 +417,7 @@ git pull origin main</code></pre>
                   33.144
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  19.040
+                  21.252
                 </td>
               </tr>
               <tr>
@@ -397,7 +426,7 @@ git pull origin main</code></pre>
                   punctuation
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  24.35
+                  24.36
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   24.00
@@ -432,7 +461,7 @@ git pull origin main</code></pre>
                   文本總字數，含標點 Total Characters, including punctuation
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  1642902
+                  1679097
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   952427
@@ -441,7 +470,7 @@ git pull origin main</code></pre>
                   621682
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  81113
+                  117308
                 </td>
               </tr>
               <tr>
@@ -449,7 +478,7 @@ git pull origin main</code></pre>
                   覆蓋漢字數 Unique Chinese Characters Coverage
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  4562
+                  4597
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   3993
@@ -458,7 +487,7 @@ git pull origin main</code></pre>
                   3520
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  2538
+                  2709
                 </td>
               </tr>
               <tr>
@@ -467,7 +496,7 @@ git pull origin main</code></pre>
                   (字/秒 characters per second)
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  4.15
+                  4.14
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
                   3.96
@@ -476,7 +505,7 @@ git pull origin main</code></pre>
                   4.47
                 </td>
                 <td class="border px-4 py-2 border-black border-0 text-lg">
-                  4.13
+                  4.12
                 </td>
               </tr>
             </tbody>
